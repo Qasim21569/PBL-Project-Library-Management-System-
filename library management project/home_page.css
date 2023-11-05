@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.section p {
+    color: #ff0000;
+}
+
+#section1 {
+    padding-top: 100px; /* Adjust this value as needed to push the content down */
+}
+
+/* Body styles */
+body {
+    background-image: url('home_page_background.jpg');
+    background-color: #4e4515;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #ff0000; /* Red color for the background */
+    color: #fff; /* White text color */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space evenly between logo and links */
+    position: fixed; /* Fixed position to stick to the top */
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar img {
+    height: auto;
+    width: auto;
+    max-height: 60px;
+    max-width: 100%;
+    margin-right: 10px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out; /* Added opacity transition */
+}
+
+.navbar img:hover {
+    transform: scale(1.1);
+    opacity: 0.8; /* Reduced opacity on hover */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 50px;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
+
+/* Scale up the links slightly on hover */
+.nav-links a:hover {
+    transform: scale(1.1); /* Scale up by 5% on hover */
+}
+
+/* Section 1: Home */
+#section1 {
+    background-image: url('your-background-image.jpg'); /* Replace 'your-background-image.jpg' with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color is white on this background */
+    text-align: center;
+    padding: 100px 0; /* Increased padding for better spacing */
+    position: relative; /* Added relative positioning */
+}
+
+#section1:hover {
+    /* Styling changes for section1 on hover */
+    background-color: #f8eeee; /* Change text color on hover to red */
+    color: #fff; /* Text color is white on hover */
+}
+
+#section1 h1.main-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px; /* Larger font size for the main heading */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Increased letter spacing for style */
+    animation: stylishFadeInOut 2s ease-in-out infinite alternate;
+    transition: color 0.5s ease-in-out;
+    position: relative; /* Adjusted position */
+    z-index: 1; /* Ensure it's above the overlay */
+}
+
+#section1 h1.main-heading:hover {
+    color: #ff0000; /* Red color on hover */
+}
+
+#section1 p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px; /* Slightly larger font size for content */
+    line-height: 1.6; /* Improved line height for readability */
+    margin: 0 auto;
+    max-width: 800px; /* Added maximum width for better content placement */
+}
+
+/* Advanced hover effect for the section */
+#section1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /* Gradient overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0; /* Adjusted z-index */
+}
+
+#section1:hover::before {
+    opacity: 1; /* Show on hover */
+}
+
+/* Section 2: About Us */
+#section2 {
+    color: #fff; /* Text color is white on this background */
+    text-align: center;
+    padding: 100px 0; /* Increased padding for better spacing */
+    position: relative; /* Added relative positioning */
+}
+
+#section2:hover {
+    /* Styling changes for section2 on hover */
+    background-color: #f8eeee; /* Change background color on hover to blue */
+    color: #fff; /* Text color is white on hover */
+}
+
+#section2 h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px; /* Larger font size for section2 heading */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Increased letter spacing for style */
+    animation: stylishFadeInOut 2s ease-in-out infinite alternate;
+    transition: color 0.5s ease-in-out;
+    position: relative; /* Adjusted position */
+    z-index: 1; /* Ensure it's above the overlay */
+}
+
+#section2 h2:hover {
+    color: #ff0000; /* Red color on hover */
+}
+
+#section2 p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px; /* Slightly larger font size for content */
+    line-height: 1.6; /* Improved line height for readability */
+    margin: 0 auto;
+    max-width: 800px; /* Added maximum width for better content placement */
+}
+
+/* Advanced hover effect for section2 */
+#section2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /* Gradient overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0; /* Adjusted z-index */
+}
+
+#section2:hover::before {
+    opacity: 1; /* Show on hover */
+}
+
+/* Section 3: Resources */
+#section3 {
+    color: #fff; /* Text color is white on this background */
+    text-align: center;
+    padding: 100px 0; /* Increased padding for better spacing */
+    position: relative; /* Added relative positioning */
+}
+
+#section3:hover {
+    /* Styling changes for section3 on hover */
+    background-color: #f8eeee; /* Change background color on hover to green */
+    color: #fff; /* Text color is white on hover */
+}
+
+#section3 h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px; /* Larger font size for section3 heading */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Increased letter spacing for style */
+    animation: stylishFadeInOut 2s ease-in-out infinite alternate;
+    transition: color 0.5s ease-in-out;
+    position: relative; /* Adjusted position */
+    z-index: 1; /* Ensure it's above the overlay */
+}
+
+#section3 h2:hover {
+    color: #ff0000; /* Red color on hover */
+}
+
+#section3 p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px; /* Slightly larger font size for content */
+    line-height: 1.6; /* Improved line height for readability */
+    margin: 0 auto;
+    max-width: 800px; /* Added maximum width for better content placement */
+}
+
+/* Advanced hover effect for section3 */
+#section3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /* Gradient overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0; /* Adjusted z-index */
+}
+
+#section3:hover::before {
+    opacity: 1; /* Show on hover */
+}
+
+/* Section 4: Contact */
+#section4 {
+    color: #fff; /* Text color is white on this background */
+    text-align: center;
+    padding: 100px 0; /* Increased padding for better spacing */
+    position: relative; /* Added relative positioning */
+}
+
+#section4:hover {
+    /* Styling changes for section4 on hover */
+    background-color: #f8eeee; /* Change background color on hover to pink */
+    color: #fff; /* Text color is white on hover */
+}
+
+#section4 h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px; /* Larger font size for section4 heading */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Increased letter spacing for style */
+    animation: stylishFadeInOut 2s ease-in-out infinite alternate;
+    transition: color 0.5s ease-in-out;
+    position: relative; /* Adjusted position */
+    z-index: 1; /* Ensure it's above the overlay */
+}
+
+#section4 h2:hover {
+    color: #ff0000; /* Red color on hover */
+}
+
+#section4 p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px; /* Slightly larger font size for content */
+    line-height: 1.6; /* Improved line height for readability */
+    margin: 0 auto;
+    max-width: 800px; /* Added maximum width for better content placement */
+}
+
+/* Advanced hover effect for section4 */
+#section4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /* Gradient overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0; /* Adjusted z-index */
+}
+
+#section4:hover::before {
+    opacity: 1; /* Show on hover */
+}
+
+footer {
+    background-color: #ff0000; /* Red color for the footer background */
+    color: #fff;
+    text-align: center; /* Center align the text */
+    padding: 10px;
+}
+
+/* Add margin to the main content to account for the fixed navbar */
+.main-content {
+    margin-top: 60px; /* Adjust as needed */
+}

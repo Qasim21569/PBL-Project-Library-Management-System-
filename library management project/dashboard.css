@@ -1,0 +1,156 @@
+/* Reset default margin and padding */
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the left-side navbar */
+.navbar {
+    width: 250px;
+    height: 100%;
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    padding-top: 20px;
+    color: #fff;
+}
+
+/* Styling for the logo and user information */
+.navbar-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar-logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-info p {
+    color: #ccc;
+    font-size: 18px;
+}
+
+/* Style for the navbar items */
+.navbar-item {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for navbar items */
+.navbar-item:hover {
+    background-color: #333;
+}
+
+/* Home link */
+.navbar-home {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+/* Logout link */
+.navbar-logout {
+    background-color: #cc0000;
+    color: #fff;
+}
+
+/* Content container */
+.content-container {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Style for buttons */
+.dashboard-button {
+    background-color: #c70000;
+    color: #fff;
+    padding: 25px 38px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.reserve-button {
+    background-color: #c70000;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for buttons */
+.dashboard-button:hover {
+    background-color: #c70000;
+}
+
+/* Style for the Available Books section */
+.books-section {
+    margin-top: 20px;
+    display: none;
+}
+
+/* Style for the table */
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.book-table th, .book-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.book-table th {
+    background-color: #c70000;
+    color: #fff;
+}
+
+.book-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style for the Available Books section */
+.books-section {
+margin-top: 20px;
+}
+
+/* Style for the table */
+.book-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.book-table th, .book-table td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: left;
+}
+
+.book-table th {
+background-color: #c70000;
+color: #fff;
+}
+
+.book-table tr:nth-child(even) {
+background-color: #f2f2f2;
+}

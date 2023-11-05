@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to IT Department's Library - Register</title>
+    <!-- Link to Google Fonts for Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent and opaque background */
+            font-family: 'Montserrat', sans-serif;
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('kjsit_background_img.png'); /* Change the background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            filter: blur(3px); /* Apply a slight blur effect to the background image */
+            opacity: 0.9; /* Make the background image slightly transparent */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 80px;
+            padding: 20px;
+            background-color: rgba(131, 126, 126, 0.8); /* Slightly transparent and opaque background */
+            border-radius: 10px; /* Soft corners */
+            backdrop-filter: blur(5px); /* Apply blur to the container background */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow to the container */
+            transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+        }
+
+        .container:hover {
+            transform: scale(1.02); /* Slightly scale up on hover */
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #ff0000; /* Change the header text color to red */
+            font-size: 32px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .custom-logo {
+            background-image: url('logo.png');
+            background-size: cover;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            border-radius: 50%; /* Circular shape for the logo */
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select[name="department"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #f2f2f2;
+            border-radius: 10px; /* Slightly round the corners */
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+            box-sizing: border-box; /* Ensure padding and border don't add to width */
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        select[name="department"]:focus {
+            background-color: #e6e6e6;
+        }
+
+        /* Center-align the registration button */
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn {
+            width: 100%; /* Keep the button width same as login page */
+            padding: 12px 20px;
+            background-color: #ff0000; /* Change the button background color to red */
+            color: #fff;
+            border: none;
+            border-radius: 10px; /* Slightly round the corners */
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #c70000; /* Change the button hover background color to a darker red */
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .login-link a {
+            color: #ff0000; /* Change the link color to red */
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Additional styles for username availability message */
+        #username-message {
+            color: #ff0000;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background image container -->
+    <div class="background-container"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1>IT Department's Library</h1>
+        </div>
+        <div class="logo">
+            <!-- Placeholder for custom logo -->
+            <div class="custom-logo"></div>
+        </div>
+        <h2>Register</h2>
+        <form action="register.php" method="post">
+            <input type="text" placeholder="Enter Your Full Name" name="full_name" required>
+            <input type="email" placeholder="Enter College Email" name="email" required>
+            <input type="text" placeholder="Create Username" name="username" required>
+            <span id="username-message"></span>
+            <input type="password" placeholder="Create Password" name="password" required>
+            <select name="department" required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="IT">IT</option>
+                <option value="COMPS">COMPS</option>
+                <option value="EXTC">EXTC</option>
+                <option value="AI-DS">AI-DS</option>
+                <option value="N.A">N.A</option>
+            </select>
+            <!-- Center-align the registration button -->
+            <div class="btn-container">
+                <button type="submit" class="btn">Register</button>
+            </div>
+        </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+    <script>
+        // Function to validate full name
+        function validateFullName() {
+            const fullNameInput = document.querySelector('input[name="full_name"]');
+            const fullName = fullNameInput.value.trim();
+
+            // Regular expression to match only letters and ' character
+            const regex = /^[A-Za-z ']+$/;
+
+            if (!regex.test(fullName)) {
+                alert('Full name should only contain letters and \' character.');
+                fullNameInput.focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        // Function to validate form before submission
+        function validateForm() {
+            const fullNameValid = validateFullName();
+            const requiredInputs = document.querySelectorAll('input[required]');
+            
+            for (const input of requiredInputs) {
+                if (input.value.trim() === '') {
+                    alert('All fields are required.');
+                    input.focus();
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // Add an event listener to the form to perform validation before submission
+        const registrationForm = document.querySelector('form');
+        registrationForm.addEventListener('submit', function (event) {
+            if (!validateForm()) {
+                event.preventDefault(); // Prevent form submission if validation fails
+            }
+        });
+
+        function checkUsernameAvailability() {
+        const usernameInput = document.querySelector('input[name="username"]');
+        const username = usernameInput.value.trim();
+        const usernameMessage = document.getElementById('username-message');
+
+        // Check if the username is not empty
+        if (username === '') {
+            usernameMessage.textContent = '';
+            return;
+        }
+
+        // Make an AJAX request to the server
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'check_username.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const response = xhr.responseText;
+                if (response === 'exists') {
+                    usernameMessage.textContent = 'Username already exists.';
+                } else {
+                    usernameMessage.textContent = 'Username is available.';
+                }
+            }
+        };
+
+        xhr.send('username=' + username);
+    }
+
+    // Add an event listener to check username availability when the input field changes
+    const usernameInput = document.querySelector('input[name="username"]');
+    usernameInput.addEventListener('input', checkUsernameAvailability);
+    </script>
+</body>
+</html>

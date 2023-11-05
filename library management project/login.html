@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to IT Department's Library - Login</title>
+    <!-- Link to Google Fonts for Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent and opaque background */
+            font-family: 'Montserrat', sans-serif;
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('kjsit_background_img.png'); /* Change the background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            filter: blur(3px); /* Apply a slight blur effect to the background image */
+            opacity: 0.9; /* Make the background image slightly transparent */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding: 20px;
+            background-color: rgba(131, 126, 126, 0.8); /* Slightly transparent and opaque background */
+            border-radius: 10px; /* Soft corners */
+            backdrop-filter: blur(5px); /* Apply blur to the container background */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow to the container */
+            transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+        }
+
+        .container:hover {
+            transform: scale(1.02); /* Slightly scale up on hover */
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #ff0000; /* Change the header text color to red */
+            font-size: 32px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .custom-logo {
+            background-image: url('logo.png');
+            background-size: cover;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            border-radius: 50%; /* Circular shape for the logo */
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Center-align input fields and button */
+        .input-container {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #f2f2f2;
+            border-radius: 10px; /* Slightly round the corners */
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+            box-sizing: border-box; /* Ensure padding and border don't add to width */
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            background-color: #e6e6e6;
+        }
+
+        /* Center-align the login button */
+        .btn-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #c70000;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .register-link a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background image container -->
+    <div class="background-container"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1>IT Department's Library</h1>
+        </div>
+        <div class="logo">
+            <!-- Placeholder for custom logo -->
+            <div class="custom-logo"></div>
+        </div>
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <!-- Center-align input fields -->
+            <div class="input-container">
+                <input type="text" placeholder="Username" name="username" required>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <!-- Center-align the login button -->
+            <div class="btn-container">
+                <button type="submit" class="btn">Login</button>
+            </div>
+        </form>
+        <div class="register-link">
+            <p>New User? <a href="register.html">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>
